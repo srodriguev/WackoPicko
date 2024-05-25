@@ -5,8 +5,12 @@ jobs:
    machineStandalone:
       runs-on: ubuntu-latest
       steps:
-         - uses: actions/checkout@cabc1b3a06beda7df98e839fa2d84db9a4bdfee7
-         - uses: docker://docker.io/fluidattacks/cli:latest
-         name: machineStandalone
-         with:
-            args: skims scan .
+         - name: Checkout repository
+           uses: actions/checkout@v2
+           with:
+             repository: srodriguev/WackoPicko
+             ref: cabc1b3a06beda7df98e839fa2d84db9a4bdfee7
+         - name: Run Fluid Attacks CLI
+           uses: docker://docker.io/fluidattacks/cli:latest
+           with:
+             args: skims scan .
