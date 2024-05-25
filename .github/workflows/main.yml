@@ -11,6 +11,6 @@ jobs:
              repository: srodriguev/WackoPicko
          - name: Run Fluid Attacks CLI
            uses: docker://docker.io/fluidattacks/cli:latest
-           strict: true
            with:
              args: skims scan .
+             strict: true
