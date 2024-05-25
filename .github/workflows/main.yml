@@ -9,6 +9,7 @@ jobs:
            uses: actions/checkout@v2
            with:
              repository: srodriguev/WackoPicko
+             strict: true
          - name: Run Fluid Attacks CLI
            uses: docker://docker.io/fluidattacks/cli:latest
            with:
