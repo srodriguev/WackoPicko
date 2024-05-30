@@ -9,6 +9,8 @@ jobs:
            uses: actions/checkout@v2
            with:
              repository: srodriguev/WackoPicko
+         - name: Configure git
+           run: git config --global --add safe.directory /github/workspace
          - name: Run Fluid Attacks CLI
            uses: docker://docker.io/fluidattacks/cli:latest
            with:
