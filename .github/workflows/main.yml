@@ -12,4 +12,4 @@ jobs:
          - name: Run Fluid Attacks CLI
            uses: docker://docker.io/fluidattacks/cli:latest
            with:
-             args: skims --strict scan . 
+             args: skims --strict scan . --csv .
