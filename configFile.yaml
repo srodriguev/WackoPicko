@@ -1,8 +1,11 @@
 namespace: myapp
-output:
-  file_path: ./Fluid-Attacks-Results.csv
-  format: CSV
 working_dir: .
+output:
+  file_path: /Fluid-Attacks-Results.csv
+  format: CSV
+strict: false
+debug: true
+file_size_limit: false
 language: EN
 apk:
   include:
@@ -10,6 +13,7 @@ apk:
 sast:
   include:
     - .
+    - glob(*)
   exclude:
     - glob(**/node_modules/**)
     - glob(**/test/**)
