@@ -1,6 +1,4 @@
 namespace: myapp
-strict: 
-  true
 output:
   file_path: ./Fluid-Attacks-Results.csv
   format: CSV
