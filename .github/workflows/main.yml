@@ -13,6 +13,8 @@ jobs:
         uses: docker://docker.io/fluidattacks/cli:latest
         with:
           args: skims scan configFile.yaml --csv
+      - name: Move results to workspace
+        run: mv /Fluid-Attacks-Results.csv /github/workspace/
       - name: List files in workspace
         run: ls -la /github/workspace
       - name: Upload scan results
