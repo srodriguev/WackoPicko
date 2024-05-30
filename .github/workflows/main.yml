@@ -12,7 +12,7 @@ jobs:
       - name: Run Fluid Attacks CLI
         uses: docker://docker.io/fluidattacks/cli:latest
         with:
-          args: skims scan /github/workspace/configFile.yaml --csv
+          args: skims scan configFile.yaml --csv
       - name: List files in workspace
         run: ls -la /github/workspace
       - name: Upload scan results
