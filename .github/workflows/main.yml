@@ -5,14 +5,12 @@ jobs:
   machineStandalone:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
       - name: Configure git
         run: git config --global --add safe.directory /github/workspace
       - name: Run Fluid Attacks CLI
         uses: docker://docker.io/fluidattacks/cli:latest
         with:
-          args: skims scan /website configFile.yaml --csv
+          args: skims scan configFile.yaml --csv
       - name: Move results to workspace
         run: mv /Fluid-Attacks-Results.csv /github/workspace/
       - name: List files in workspace
